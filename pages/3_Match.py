@@ -50,9 +50,9 @@ if btn:
   for pair in pairs[0:10]:
     i, j = pair['index']
     print("{} \t\t {} \t\t Score: {:.4f}".format(name[i], list_users[j], pair['score']))
-    res_users.append([name[i], list_users[j], pair['score']])
+    res_users.append([name[i], list_users[j], float(pair['score'])])
     print("{} \t\t {} \t\t Score: {:.4f}".format(problem[i], list_problems[j], pair['score']))
-    res_problems.append([problem[i], list_problems[j], pair['score']])
+    res_problems.append([problem[i], list_problems[j], float(pair['score'])])
   
   pd_users = pd.DataFrame(res_users, columns = ['new_user', 'existing_usrs', 'score'])
   pd_problems = pd.DataFrame(res_problems, columns = ['new_problem', 'existing_problems', 'score'])
