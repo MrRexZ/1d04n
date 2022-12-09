@@ -47,7 +47,7 @@ res_problems = []
 if btn:
   st.write("")
   pairs = calc_similarity(problem, list_problems)
-  for pair in pairs[0:10]:
+  for pair in pairs[0:16]:
     i, j = pair['index']
     print("{} \t\t {} \t\t Score: {:.4f}".format(name[i], list_users[j], pair['score']))
     res_users.append([name[i], list_users[j], float(pair['score'])])
